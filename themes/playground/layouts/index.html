@@ -1,5 +1,14 @@
 {{ define "main" }}
-  <section>
-    {{ partial "card.html" . }}
-  </section>
+{{ $json := getJSON "data/events.json" }}
+<ul>
+    {{ range sort $json.events "date" "desc" }}
+    <li>
+        <b>
+            {{ .name }}
+        </b>
+        <br>            
+        {{ .date }}
+    </li>
+    {{ end }}
+</ul>
 {{ end }}

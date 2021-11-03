@@ -1,9 +1,0 @@
-{{ $data := getJSON "/data/products.json" }}
-{{ range $data }}
-    {{ $src := .Imgsrc }}
-    {{ $name := .Name }}
-    <header>
-        <h2>{{ $name }}</h2>
-    </header>
-    <img src={{ .Imgsrc }} alt={{ $name }} />
-{{ end }}
