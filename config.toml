@@ -1,0 +1,6 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "play ground"
+
+timeout = 30000
+theme = "playground"
